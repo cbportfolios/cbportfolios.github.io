@@ -1,0 +1,56 @@
+  	body {
+  		padding: 2em; 
+  		margin: 0;
+  		font-family: Helvetica;
+  	} 
+  	
+  	li {
+  		type: "1";
+  	}
+  	
+  	.explanation {
+  		width: 510px;
+  		padding: 10px;
+  		border: none;
+  		font-size: 95%;
+  	}
+  	
+  	#reset2 {
+  		padding-left: 10px;
+  	}
+  	
+  	#subtitle {
+  		padding: 10px;
+  		padding-left: 10px;
+  		width: 350px;
+  		color: #686868;
+  	}
+  	
+  	.btitle {
+  		font-size: 150%;
+  		padding-left: 10px;
+  	}
+  	
+  	table {
+  		border-spacing: 4px; 
+  		text-align: center;
+  	}
+  	
+  	td {
+  		 border: none; 
+  	}
+  	
+  	input[type=button] {
+    	padding: 10px 15px; 
+    	margin-left: 10px;
+    	background:#ccc; 
+    	border:0 none;
+    	cursor:pointer;
+    	font-size: 80%;
+    	font-family: Helvetica;
+		}
+		
+		input[type=button]:hover {
+			background-image:none;
+			background-color:#66CCFF;
+		}

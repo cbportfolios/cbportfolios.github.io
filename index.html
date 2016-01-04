@@ -1,0 +1,94 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  
+  <!-- 
+  This interactive graphic uses the new p5.js JavaScript library. 
+  
+  p5.js is graphics API for creative coding in the browser and has three benefits:
+		- precise control of all graphical elements (points, lines etc)
+		- easy integration with D3.js (not used here)
+		- accessible and readable
+	-->
+  
+  <!-- p5 library -->
+	<script language="javascript" type="text/javascript" src="p5.min.js"></script>
+	<script language="javascript" type="text/javascript" src="p5.dom.js"></script>
+	
+	<!-- Graph Scripts -->
+	<script language="javascript" type="text/javascript" src="portfolioClass.js"></script>
+	<script language="javascript" type="text/javascript" src="bondClass.js"></script>
+	<script language="javascript" type="text/javascript" src="drawControl.js"></script>
+	
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="bonds.css">
+
+</head>
+
+<body>
+
+<div class="btitle">Bond Portfolio Calculator</div>
+<div id="subtitle">A simple program to illustrate how coupon rate and term to maturity affect a bond's volatility</div>
+<br />
+<div id="preamble" class="explanation">
+
+Bond prices move in the opposite direction to interest rates. To identify the most volatile bonds - 
+the bonds whose prices are most vulnerable to rate changes - professional 
+asset managers turn to mathematical metrics such as 'modified duration'. However, this interactive graph 
+lets you develop an intuition for bond volatility without having to do any maths. 
+
+<br /><br />
+
+To the right hand side, eight real government bonds (UK gilts) are displayed 
+with their corresponding coupon rates (percentage of par value paid annually to the holder), market price, 
+and remaining time until maturity. The final two bonds in the list, shaded grey, are 'virtual' or 'made-up' 
+bonds that are equivalent to the final listed gilt in all but their coupon rates, which are higher. 
+
+</div>
+<table>
+	<tr id="io">
+		<td id="canv"><span id='myContainer'></span></td>
+	</tr>
+</table>
+
+<div class="explanation">
+
+Portfolios made primarily of long term bonds in the list tend to be 
+<a href="#" id="demo1">much more volatile.</a> The height of each bar indicates a percentage 
+decrease in price for a bond given a half-percent increase in interest rates. The colour 
+of the bar indicates which bond in the table is being represented; the increase in interest rate is always taken to 
+be a half percent across the maturity spectrum.
+
+<br /><br />
+
+Gilt 8 will decrease in value by approximately 12% for a 0.5% rate-increase. Roughly that is from 
+£143 to £126. It is the long time to maturity that makes for this high level of sensitivity. Using our 
+virtual bonds as a comparison, we can see what that level of sensitivity would be if Gilt 8 had been issued 
+with a <a href="#" id="demo2">higher coupon rate</a> (7% or 10%).
+
+<br /><br />
+
+Clearly, higher coupon rates mitigate some of the effects of interest rate changes. But short term bonds 
+with much lower coupon rates are still <a href="#" id="demo3">much less volatile</a>. 
+
+<br /><br />
+
+Similar characteristics to UK gilts are reflected in other major bond markets.
+
+<br /><br />
+
+It is the art and science of investment management to build a portfolio that strikes 
+the right balance between risk and return. This is achieved 
+<a href="#" id="demo4">by combining bonds of different volatilities</a>, in different 
+proportions, into portfolios that reduce the effects of rate changes on long term bonds.
+
+<br /><br />
+<a href="#" id="reset">Reset</a> the graph and try to build your own ideal bond portfolio
+
+</div>
+
+<br />
+<input type="button" id="method" value="Technical Details">
+
+</body>
+</html>

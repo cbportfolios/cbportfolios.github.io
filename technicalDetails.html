@@ -1,0 +1,42 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+	<!-- CSS Stylesheet -->
+	<link rel="stylesheet" type="text/css" href="bonds.css">
+
+</head>
+
+<body>
+<div class="btitle"> Technical Details </div>
+
+<div class="explanation">
+
+The market values of bonds individually or as portfolios reflect the sums of the present 
+values of periodic coupons and the final redemption payment (at par), discounted by prevailing 
+market yields to maturity (i.e. "gross yield to maturity" or "redemption yield"). The extent 
+of value changes depends on the coupon levels and maturities of each bond (itself a mini-portfolio), 
+most of which can be captured by the "modified duration".
+
+<br /><br />
+
+Modified duration is not a perfect measure of bond-price sensitivity to interest rate 
+changes. However, for small changes in rates, where a bond's cash flows don't change (the 
+coupon is fixed), it can serve as a useful model for that bond's volatility.
+
+<br /><br />
+
+This interactive graph uses modified durations that have been precalculated 
+using Excel's RATE function. This calculation can't easily be done in the JavaScript program because 
+finding a bond's Yield to Maturity - a precondition for Macaulay Duration from which Modified Duration 
+is calculated - requires a numerical approximation method such as Newton-Raphson as well as computation of 
+some large factorials. Both of these lead to problems of 'overflow' and 'underflow'.
+
+<br /><br />
+
+The shading of a bar on the chart <u>does not</u> reflect proportion of the portfolio's value contributed by its bonds. 
+Instead, the bar that corresponds to that portfolio is shaded to reflect the proportions of <u>price-sensitivity</u> 
+contributed by each bond in the portfolio: [weighted modified duration for bond]/[portfolio's modified duration]
+
+</div>
+</body>
+</html>
